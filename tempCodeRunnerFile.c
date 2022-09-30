@@ -1,30 +1,24 @@
 #include <stdio.h>
-
 int main()
 {
-    int i, j, rows;
-
-    /* Input rows to print from user */
-    printf("Enter number of rows : ");
-    scanf("%d", &rows);
-
-    for(i=1; i<=rows; i++)
+    int x = 0,y = 0;
+    unsigned int rows = 0;
+    printf("Enter the number of rows = ");
+    scanf("%u",&rows);
+    for(x=1; x<=rows; ++x)
     {
-        /* Print leading spaces */
-        for(j=1; j<i; j++)
+        // Print spaces
+        for(y=1; y<=x; ++y)
         {
             printf(" ");
         }
-
-        /* Print stars */
-        for(j=1; j<=(rows*2 -(2*i-1)); j++)
+        // Print star/
+        for(y =1; y <=((rows*2)-((2*x)-1)); ++y)
         {
             printf("*");
         }
-
-        /* Move to next line */
+        // Print new line
         printf("\n");
     }
-
     return 0;
 }
