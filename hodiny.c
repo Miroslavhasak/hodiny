@@ -7,7 +7,7 @@ int main ()
     scanf("%d", &hodnota);
     if (hodnota % 2 == 0)
     {
-        printf("Neparne!!!!\n");    //osternie pre parne cisla
+        printf("Neparne!!!!\n");    //osetrenie pre parne cisla
         return 0;
     }
 
