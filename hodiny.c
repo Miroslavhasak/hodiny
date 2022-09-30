@@ -2,7 +2,7 @@
 
 int main ()
 {
-    int hodnota = 0,i = 0,a = 0;
+    int hodnota = 0, i = 0, a = 0, b = 0;
     printf("Zadaj neparne cislo: ");
     scanf("%d", &hodnota);
     if (hodnota % 2 == 0)
@@ -18,18 +18,24 @@ int main ()
     printf("*");
     }                               //vypisanie prveho riadku hviezdiciek
     printf("\n");
-    printf(" ");
     
     
-    if (hodnota > a)
+    
+    for (a = 0; a < hodnota ; a++)
     {
-    a++;
-    hodnota -= 2;
-    for (i = 0; i < hodnota; i++)
+    hodnota -= 2;                   //musi tam byt prvy odsek lebo tu sa odratava uz
+    for (i = 0; i < hodnota; i++)   
     {
-    printf("*");
+    printf("*");                    //cyklus pre dalsie riadky
     }
     printf("\n");
+    
+    /*for (a = 0; a < hodnota ; a++)
+    {
+
+    }
+     
+    */
     }
     
     /*
