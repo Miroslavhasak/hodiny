@@ -1,24 +1,38 @@
 #include <stdio.h>
-int main()
+#define _CRT_SECURE_NO_WARNINGS
+int main(int argc, char** argv)
 {
-    int x = 0,y = 0;
-    unsigned int rows = 0;
-    printf("Enter the number of rows = ");
-    scanf("%u",&rows);
-    for(x=1; x<=rows; ++x)
+    int x, y, z;
+    printf("zadaj sirku presypacich hodin: ");
+    scanf("%d", &z);
+    if (z > 0 && (z% 2) != 0)//ak je velkost piramidy neparne a kladne cislo pokracuj
+    for (x = z / 2 + 1; x > 1; x--)
     {
-        // Print spaces
-        for(y=1; y<=x; ++y)
+        for (y = x; y < z; y++)
         {
             printf(" ");
         }
-        // Print star/
-        for(y =1; y <=((rows*2)-((2*x)-1)); ++y)
+        for (y = 1; y <= (2 * x - 1); y++)
         {
             printf("*");
         }
-        // Print new line
         printf("\n");
     }
-    return 0;
+    else { //inak zastav program
+        printf("Nespravny vstup ");
+        return 0;
+    }
+
+    for (x = 1; x <= z / 2 + 1; x++)
+    {
+        for (y = x; y < z; y++)
+        {
+            printf(" ");
+        }
+        for (y = 1; y <= (2 * x - 1); y++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
 }

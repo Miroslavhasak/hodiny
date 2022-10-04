@@ -1,14 +1,20 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-int main()
+int main(int argc, char** argv)
 {
-    int num = 0, num1=0, i = 0, a = 0, b = 1, test = 1,c=0;
-    printf("Zadaj neparne cislo: ");
-    scanf("%d", &num);
-    if (num % 2 == 0)
+    int num = 0, num1=0, i = 0, a = 0, b = 1, test = 1,c=0, velkost;
+    num = atoi(argv[1]);
+        if (num % 2 == 0)
     {
         printf("Neparne!!!!\n");    //osetrenie pre parne cisla
         return 0;
+    }
+	if (num < 0)
+    {
+	    printf("Kladne!!!!\n");
+	return 0;
     }
 
     for (i = 0; i < num; i++)
